@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'my-angular-project';
+  title = 'AjayA';
+  unusedVariable: string = '';
+
+  constructor(
+    private _router: Router
+  ) {
+
+  }
+
+  rediret(path: string) {
+    this._router.navigate([`/${path}`]);
+  }
 }
